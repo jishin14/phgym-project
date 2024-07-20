@@ -90,7 +90,7 @@ table th {
     justify-content: flex-end;
 }
 
-.buttons button {
+.buttons > .combtn {
     padding: 10px 20px;
     font-size: 16px;
     margin-left: 10px;
@@ -101,7 +101,7 @@ table th {
     border-radius: 5px;
 }
 
-.buttons button:hover {
+.buttons > .combtn:hover {
     border: 1px solid #f97316;
     background-color: #fff;
 } 

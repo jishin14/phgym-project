@@ -4,9 +4,32 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.phgym.board.model.BoardMapper">
 	<!-- 쿼리 작성 -->
+	<!-- <select id="getList" resultType="com.phgym.board.model.BoardDTO">
+		SELECT * FROM EXERCISE_INFO ORDER BY INFO_NO DESC
+	</select> -->
 	
-	<insert id="getList" parameterType="com.phgym.board.model.BoardDTO">
-		SELECT * FROM EXERCISE_INFO ORDER BY INFO_NO DESC;
-	</insert>
+	<!-- <select id="getList" resultType="com.phgym.board.model.BoardDTO">
+		SELECT INFO_NO, ADMIN_NO, TITLE, CONTENT, WRITE_DATE FROM EXERCISE_INFO ORDER BY INFO_NO DESC
+	</select> -->
+	
+	<!-- <insert id="regist" parameterType="com.phgym.board.model.BoardDTO">
+		INSERT INTO EXERCISE_INFO (INFO_NO, ADMIN_NO, TITLE, CONTENT)
+		VALUES (EXERCISE_INFO_SEQ.NEXTVAL, #{admin_no}, #{title}, #{content})
+	</insert> -->
+	
+	<!-- <insert id="regist" parameterType="com.phgym.board.model.BoardDTO">
+        INSERT INTO EXERCISE_INFO (INFO_NO, ADMIN_NO, TITLE, CONTENT, WRITE_DATE, HIT)
+        VALUES (EXERCISE_INFO_SEQ.NEXTVAL, #{admin_no}, #{title}, #{content}, CURRENT_TIMESTAMP, 0)
+    </insert> -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 </mapper>

@@ -2,8 +2,6 @@ package com.phgym.controller;
 
 import java.io.IOException;
 import com.phgym.join.service.JoinService;
-import com.phgym.join.service.JoinServiceImpl;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -37,7 +35,7 @@ public class JoinController extends HttpServlet {
 		JoinService service = null;
 
 		if (command.equals("/join/pwFind.join")) { // 비밀번호찾기
-			service = new JoinServiceImpl();
+			//service = new JoinServiceImpl();
 			service.pwFind(request, response);
 		}
 

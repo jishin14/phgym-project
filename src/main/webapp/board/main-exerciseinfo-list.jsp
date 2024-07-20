@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,64 +25,20 @@
                     <th>번호</th>
                     <th>제목</th>
                     <th>이름</th>
-                    <th>아이디</th>
                     <th>작성일</th>
                     <th>조회수</th>
                 </tr>
             </thead>
             <tbody>
-            
-            	<c:forEach var="dto" items="${list }">
-            	
-            	</c:forEach>
-                <tr>
-                    <td>6</td>
-                    <td>안녕하세요</td>
-                    <td>홍길동</td>
-                    <td>abc123</td>
-                    <td>2024-07-08</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>반갑습니다</td>
-                    <td>홍길자</td>
-                    <td>abc123</td>
-                    <td>2024-07-08</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>반갑습니다</td>
-                    <td>이순신</td>
-                    <td>abc123</td>
-                    <td>2024-07-08</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>반갑습니다</td>
-                    <td>홍길순</td>
-                    <td>abc123</td>
-                    <td>2024-07-08</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>반갑습니다</td>
-                    <td>신사임당</td>
-                    <td>abc123</td>
-                    <td>2024-07-08</td>
-                    <td>100</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>반갑습니다</td>
-                    <td>세종대왕</td>
-                    <td>abc123</td>
-                    <td>2024-07-08</td>
-                    <td>100</td>
-                </tr>
+                <c:forEach var="dto" items="${list}">
+                    <tr>
+                        <td>${dto.info_no}</td>
+                        <td><a href="getContent.board?info_no=${dto.info_no}">${dto.title}</a></td>
+                        <td>${dto.admin_no}</td>
+                        <td><fmt:formatDate value="${dto.write_date}" pattern="yyyy년 MM월 dd일 HH시 mm분 ss초"/></td>
+                        <td>${dto.hit}</td>
+                    </tr>
+                </c:forEach>
             </tbody>
         </table>
         <div class="pagination">
@@ -93,7 +51,7 @@
             <button>Next ▶</button>
         </div>
         <div class="buttons">
-            <button>등록</button>
+            <input type="button" value="등록" class="combtn" onclick="location.href='main_exe_post_form.board';">
         </div>
     </div>
 
