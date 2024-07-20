@@ -2,25 +2,25 @@ package com.phgym.join.model;
 
 import java.time.LocalDateTime;
 
-public class UserJoinDTO {
+public class UserInfoDTO {
 
-	private int userNo;
-	private String userId;
-	private String pw;
-	private String name;
-	private LocalDateTime birth;
-	private String gender;
-	private String phone;
-	private String email;
-	private String address;
-	private LocalDateTime regDate;
-	private String profile;
+	private int userNo; // 회원번호
+	private String userId; // 아이디
+	private String pw; // 비밀번호
+	private String name; // 이름
+	private LocalDateTime birth; // 생년월일
+	private String gender; // 성별
+	private String phone; // 연락처
+	private String email; // 이메일
+	private String address; // 주소
+	private LocalDateTime regDate; // 가입일
+	private String profile; // 프로필
 	
-	public UserJoinDTO() {
+	public UserInfoDTO() {
 		
 	}
 	
-	public UserJoinDTO(int userNo, String userId, String pw, String name, LocalDateTime birth, String gender,
+	public UserInfoDTO(int userNo, String userId, String pw, String name, LocalDateTime birth, String gender,
 			String phone, String email, String address, LocalDateTime regDate, String profile) {
 		super();
 		this.userNo = userNo;

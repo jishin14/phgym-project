@@ -55,7 +55,7 @@ ul, li, ol, dl, dd {
     color: #000;
 }
 
-.wrap button {
+.wrap > input {
     display:block;
     width: 175px;
     margin-top: 15px;

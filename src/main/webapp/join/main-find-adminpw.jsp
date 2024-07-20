@@ -40,6 +40,7 @@
 	
 	<script>
 	var adminPwFind = ${!empty adminPwFind};
+	
 	if(adminPwFind) {
 		alert("${adminPwFind}");
 	}
