@@ -46,8 +46,8 @@
 					<input type="submit" value="로그인">
 
 					<div class="find">
-						<a href="main-find-adminid.jsp">아이디찾기</a> <a
-							href="main-find-adminpw.jsp">비밀번호찾기</a>
+						<a href="main-find-adminid.jsp">아이디찾기</a>
+						<a href="main-find-adminpw.jsp">비밀번호찾기</a>
 					</div>
 				</form>
 			</div>
